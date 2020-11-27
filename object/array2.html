@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //배열선언
+      let arr = ["Saab", 1, true, 38.5, "s"];
+      document.write(arr);
+      document.write("<br>");
+
+      //배열에 요소 추가
+      arr.push(77);
+      arr.push(55);
+      for (var i in arr) document.write(arr[i] + "<br>");
+
+      arr.pop(true); // 다른건 괜찮은데 true 뺄라고 하니까 pop이 안되네
+      for (var i in arr) document.write(arr[i] + "<br>");
+
+      document.write("<br><br>");
+      document.write("<br><br>");
+      document.write("<br><br>");
+      let arr2 = new Array("java", 11, 27, "code");
+      for (let i = 0; i < arr2.length; i++) {
+        document.write(arr2);
+      }
+      document.write("<br><br>");
+      document.write("<br><br>");
+      document.write("<br><br>");
+      for (let i in arr2) {
+        document.write(arr2[i]);
+      }
+      document.write("<br><br>");
+      document.write("<br><br>");
+      document.write("<br><br>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //사용자에게 국어, 영어, 수학 점수를 입력받아 평균을 구한 뒤
+      // A, B, C, D, E 등급 출력하기
+
+      let kor = Number(prompt("국어 점수는?"));
+      let eng = Number(prompt("영어 점수는?"));
+      let math = Number(prompt("수학 점수는?"));
+
+      let jumsu = (kor + eng + math) / 3;
+
+      if (jumsu >= 90) {
+        document.write(jumsu + " - A 등급");
+      } else if (jumsu >= 80) {
+        document.write("B 등급");
+      } else if (jumsu >= 70) {
+        document.write("C 등급");
+      } else if (jumsu >= 60) {
+        document.write("D 등급");
+      } else {
+        document.write("E 등급");
+      }
+    </script>
+  </body>
+</html>
