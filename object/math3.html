@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //이번 주 로또 번호
+      //로또 번호 6개를 호출하여 배열에 담은 후 출력하기
+      // 1~45 => [6,12,22,32,42,45]
+      // while
+
+      //빈 배열 생성
+
+      //   let a = Math.floor(Math.random() * 45) + 1;
+      //   let b = Math.floor(Math.random() * 45) + 1;
+      //   let c = Math.floor(Math.random() * 45) + 1;
+      //   let d = Math.floor(Math.random() * 45) + 1;
+      //   let e = Math.floor(Math.random() * 45) + 1;
+      //   let f = Math.floor(Math.random() * 45) + 1;
+
+      //   let arr = new Array();
+      //   arr.push(a);
+      //   arr.push(b);
+      //   arr.push(c);
+      //   arr.push(d);
+      //   arr.push(e);
+      //   arr.push(f);
+
+      //   document.write("[ 이번주 로또 번호 : ", arr, "]");
+
+      //빈 배열 생성
+      //let lottoArray = [];
+      let lottoArray = new Array();
+
+      while (true) {
+        // 로또 번호 추출
+        let lotto = Math.floor(Math.random() * 46) + 1; //1~46
+        // 배열에 담기
+        lottoArray.push(lotto);
+
+        // 로또 번호 6개만 추출
+        if (lottoArray.length > 5) {
+          break;
+        }
+      }
+      document.write("이번주 로또 번호 : ", lottoArray);
+    </script>
+  </body>
+</html>
