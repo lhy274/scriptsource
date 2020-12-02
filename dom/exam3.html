@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <h2 id="light">The Light Bulb</h2>
+    <button type="button" onclick="onLight()">Turn on the light</button>
+    <img src="pic_bulboff.gif" alt="불꺼" />
+    <button type="button" onclick="offLight()">Turn off the light</button> -->
+    <h2 id="light">The Light Bulb</h2>
+    <!-- <button type="button" onclick="onLight()" value="Turn on the light"></button> -->
+    <input type="button" value="Turn on the light" onclick="onLight()" />
+    <img src="pic_bulboff.gif" alt="불꺼" />
+    <input type="button" value="Turn off the light" onclick="offLight()" />
+    <!-- <button type="button" onclick="offLight()" value="Turn off the light"></button> -->
+    <script>
+      function onLight() {
+        let img = document.querySelector("img");
+        img.src = "pic_bulbon.gif";
+      }
+      function offLight() {
+        let img = document.querySelector("img");
+        img.src = "pic_bulboff.gif";
+      }
+    </script>
+  </body>
+</html>

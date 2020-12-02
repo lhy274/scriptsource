@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <img src="doit.jpg" alt="">
+      <img src="doit.jpg" alt="" />
     </div>
-    <script>
-
-    </script>
-</body>
+    <p>
+      <input type="checkbox" name="popup" id="" onclick="windowClose()" />오늘은
+      이 창 보지 않기
+    </p>
+  </body>
+  <script>
+    function windowClose() {
+      this.close();
+    }
+  </script>
 </html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" name="" id="target" />
+      <input type="button" value="제출" onclick="process()" />
+    </form>
+    <script>
+      function process() {
+        let msg = document.getElementById("target");
+        //onsole.log(msg.value); //값을 가져올 때
+        //msg.value = "Hello"; //값을 변경할 때
+
+        //console.log(msg.innerText); //이거라고 생각했는데 아무것도 안뜨는구나
+        console.log(msg.lastElementChild);
+      }
+    </script>
+  </body>
+</html>

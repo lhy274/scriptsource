@@ -13,7 +13,7 @@
       var msg = new String("hello javascript");
 
       document.write("특정 위치 문자 반환 : ", msg.charAt(4), "<br>");
-      document.write("문자 찾기 : ", msg.indexOf("a"), "<br>"); // 못찾는 경우 -1
+      document.write("문자 찾기 : ", msg.indexOf("a"), "<br>"); // 못찾는 경우 -1 반환
       document.write("문자 찾기 : ", msg.match("ja"), "<br>");
       document.write("문자 찾기 : ", msg.match("boy"), "<br>");
       document.write("특정 문자 변경 : ", msg.replace("hello", "hi"), "<br>");
@@ -21,7 +21,7 @@
       document.write("문자 자르기 : ", msg.slice(6, 10), "<br>");
       document.write("문자 자르기 : ", msg.substring(6, 10), "<br>");
       document.write("문자 공백 제거 : ", "    hello    ".trim(), "<br>");
-      // "   hello" == "hello" . 둘이 다름
+      // "   hello" == "hello" . 둘이 다를 수도 같을 수도 있음.
       document.write("대문자 변경 : ", msg.toUpperCase(), "<br>");
       document.write("소문자 변경 : ", "ABCDEFG".toLowerCase(), "<br>");
     </script>
