@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #wrap {
+        margin: 10px;
+      }
+      input {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div>
+        <input type="text" />
+      </div>
+      <div><a href="http://naver.com">네이버</a></div>
+      <div>
+        <input type="text" name="username" />
+      </div>
+      <div>
+        <input type="password" name="password" />
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        //첫번째 input에 Hello jQuery 를 보여주고 싶을 때
+        //속성 값을 가지고 줄 때 간단한 것은 "[='']" 이런식이 아니라. => "태그명:type값"
+        //더 간단하게
+        // : 연달아서
+        // $("[type='text']").val("Hello jQuery");
+        //$("input:text").val("Hello jQuery");
+        //$(":text").val("Hello jQuery");
+        $(":text:first").val("Hello jQuery");
+        $("a[href^='http']").css("background-color", "yellow");
+        $("[name='username']").css("background-color", "lightgray");
+        $("[name='password']").css("background-color", "gray");
+        //$("[type='password']").css("background", "red");
+        //$("input:password").css("background", "red");
+        $(":password").css("background", "red");
+      });
+    </script>
+  </body>
+</html>

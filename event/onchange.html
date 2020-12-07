@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>처음이야.</title>
+  </head>
+  <body>
+    <div>
+      <label for="">이름</label>
+      <input type="text" name="word" onchange="lower()" />
+    </div>
+    <p>입력 필드를 벗어나면 소문자로 변경됩니다.</p>
+    <script>
+      function lower() {
+        // 처음으로 풀었어!!!
+        //text 요소의 값을 가져온 후 소문자로 변경하여 다시 보여주기
+        // let low = document.querySelector("[type='text']").value;
+
+        // var result = low.toLowerCase();
+        // document.querySelector("[type='text']").value = result;
+
+        var element = document.querySelector("[name='word']");
+        element.value = element.value.toLowerCase();
+      }
+    </script>
+  </body>
+</html>

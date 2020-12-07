@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>List item1</li>
+      <li>List item2</li>
+      <li>List item3</li>
+      <li>List item4</li>
+      <li>List item5</li>
+    </ul>
+    <button>클릭</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        //button 클릭시 li 요소 가져와서 li 요소의 텍스값 출력
+        $("button").click(function () {
+          //innerText => text(), innerHTML => html()
+          let ul = $("ul > li");
+          console.log(ul);
+
+          //내가한거 제대로 돌아감
+          //그렇지만 한줄에 다 나왔음. 배열의 특징을 살리지 못한듯.
+          //[i] 중요했던듯. 값이 block 설정됨. 내껀 inline이고
+          // for (var i in ul) {
+          //   console.log(ul.text());
+          // }
+
+          // 자바스크립트
+          // for (var i = 0; i < ul.length; i++) {
+          //   console.log(ul[i].innerText);
+          // }
+
+          //jQuery
+          //for (var i = 0; i < ul.length; i++) {
+          //console.log(ul[i].text());   //이거는 에러나옴
+          //console.log(ul[i].textContent);
+          //console.log($(ul[i]).text());
+          // }
+
+          //jQuery 더 간단한 for문을 쓰는 방법이 있어.
+          //$.each(배열명, 펑션() {})
+          $.each(ul, function () {
+            console.log($(this).text());
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

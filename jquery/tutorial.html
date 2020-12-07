@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>hi</h3>
+    <ul>
+      <li>num 1</li>
+      <li>num 2</li>
+      <li>num 3</li>
+      <li>num 4</li>
+      <li>num 5</li>
+    </ul>
+    <ol>
+      <li>txt 1</li>
+      <li>txt 2</li>
+      <li>txt 3</li>
+      <li>txt 4</li>
+      <li>txt 5</li>
+    </ol>
+    <p>Apple</p>
+    <span><h1>Hello</h1> </span>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("p").click(function () {
+          console.log($(this).text());
+        });
+        $("span").click(function () {
+          let s = $("span");
+          console.log(s.html());
+        });
+
+        // $("ol").click(function () {
+        //   $each($("ol > li"), function () {
+        //     console.log($("ol > li").text());
+        //   });
+
+        let o = $("ol > li");
+
+        $("h3").click(function () {
+          $.each(o, function () {
+            console.log($(this).text());
+          });
+        });
+
+        // 이 형식 대로 안하면 에러나네
+      });
+    </script>
+  </body>
+</html>

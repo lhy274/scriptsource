@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      table,
+      tr,
+      td {
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>클릭하면 사라집니다</h2>
+    <p class="para1">이것은 문단입니다.</p>
+    <p id="para2">이것은 두번째 문단입니다</p>
+    <table>
+      <tr>
+        <td>내용1</td>
+        <td>내용2</td>
+      </tr>
+      <tr>
+        <td>내용1</td>
+        <td>내용2</td>
+      </tr>
+      <tr>
+        <td>내용1</td>
+        <td>내용2</td>
+      </tr>
+      <tr>
+        <td>내용1</td>
+        <td>내용2</td>
+      </tr>
+    </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        //h2, .para1, #para2 를 클릭하면 h1 글자 생상을 red 변경
+        $("h2, .para1, #para2").click(function () {
+          $("h2").css("color", "red");
+        });
+        //짝수 행의 배경색 변경 01234 이렇게 감.   odd : 홀수 / even : 짝수
+        $("tr:even").css("background-color", "#bbf");
+      });
+    </script>
+  </body>
+</html>

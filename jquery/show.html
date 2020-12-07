@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="hide1">If you double-click on me. I will disappear</p>
+    <p class="hide">Hide</p>
+    <p class="show">Show</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $(".hide1").dblclick(function () {
+          $(this).hide();
+        });
+        $(".hide").click(function () {
+          $(this).hide(2000);
+        });
+        $(".show").click(function () {
+          $(this).show();
+        });
+      });
+    </script>
+  </body>
+</html>
