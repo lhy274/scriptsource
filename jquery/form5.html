@@ -24,7 +24,7 @@
           //체크박스버튼에서 체크된 값 가져오기
           var chkfruit = "";
           $(":checked").each(function () {
-            chkfruit += $(this).val();
+            chkfruit += $(this).val() + ", ";
           });
 
           $("#result").html("결과값 : " + chkfruit);

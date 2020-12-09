@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #result {
+        color: red;
+        margin-top: 0;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="tel" onfocus="inputClear()" />
+    <input type="button" value="보내기" onclick="telCheck()" />
+    <p id="result"></p>
+    <script>
+      let result = document.querySelector("#result");
+      let tel = document.querySelector("[name='tel']");
+      function inputClear() {
+        tel.select();
+        //포커스를 주면 하단에 나왔던 검증 메시지 없애기
+        //document.querySelector("#result").innerHTML = ""; // text는 텍스트만 지워주는 거라서 안되나보다? value를 했었는데 그건 가져오는거라서 !!!
+        result.style.display = "none";
+        // tel.style.display = "inline"; 이것저것 내용 지워볼라고 했는데 안되네
+        //tel.value = ""; //  이렇게 해야되는구나 .된다!!!
+      }
+      function telCheck() {
+        //정규식 패턴 생성
+        let reg = /\d{2,3}-\d{3,4}-\d{4}$/;
+        //사용자가 입력한 값 가져오기
+
+        //console.log(reg.test(tel)); //정규식 맞게 써졌는지 확인
+        if (!reg.test(tel.value)) {
+          //패턴과 일치하지 않는다면
+          //   let rs = document.getElementById("result");
+          //   rs.innerText = "전화번호를 확인해 주세요";
+          // document.getElementById("result").innerText =
+          result.style.display = "block";
+          result.innerHTML = "전화번호를 확인해 주세요";
+          //   document.getElementById("result").css("color", "red");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Lorem Ipsum dolor sit amet consectetur, adipisicing elit. Debitis, iste
+      commodi fugit esse odit illum sequi ipsa consequuntur non,facilis neque
+      inventore quo vero vel! Odio, laudantium tempore. Nobis, quas!<br />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae deserunt
+      voluptatibus explicabo ducimus laborum, porro eveniet inventore?
+      Blanditiis tempora, ut, iure excepturi veniam dolore quibusdam earum
+      perferendis neque possimus veritatis?
+    </p>
+    <script>
+      //원본 문자열 가져오기
+      let p1 = document.querySelector("p").innerText;
+
+      console.log("i플래그 사용");
+      console.log(p1.match(/ipsum/i));
+      console.log("");
+
+      console.log("ig플래그 사용");
+      console.log(p1.match(/ipsum/gi));
+      console.log("");
+    </script>
+  </body>
+</html>
